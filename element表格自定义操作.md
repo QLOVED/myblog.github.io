@@ -1,19 +1,4 @@
 
-最近的项目中使用到element-ui组件库，由于做的是后台管理系统，所以经常需要操作表格，编辑样式的过程中遇到一些问题，官网针对table给出了很多的api，自己可以自定义，基本能满足产品需求，但是没有给出具体的案例，网上的资料也比较简略，这里简单整理下一些常用的操作，如果有类似的功能可以做一个参考。
-具体的使用方法还是建议仔细阅读官网-table章节：
-https://element.eleme.cn/#/zh-CN/component/table#table-column-scoped-slot
-该项目demo已上传github，欢迎大家下载：
-# 克隆到本地
-git clone git@github.com:Hanxueqing/Element-table.git
-
-# 安装依赖
-npm install
-
-# 开启本地服务器localhost
-npm run dev
-
-项目地址：
-https://github.com/Hanxueqing/Element-table
 自定义列的内容
 需求：在表格最后一栏添加操作按钮
 
