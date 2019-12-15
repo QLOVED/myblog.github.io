@@ -1,8 +1,8 @@
 
-自定义列的内容
-需求：在表格最后一栏添加操作按钮
+# 自定义列的内容
+#### 需求：在表格最后一栏添加操作按钮
 
-通过slot-scope="scope"添加操作按钮，这是专门为我们提供的插槽，方便自定义添加不同的内容。
+* 1 通过slot-scope="scope"添加操作按钮，这是专门为我们提供的插槽，方便自定义添加不同的内容。
 ```
    <template slot-scope="scope">
     <el-button size="mini" type="primary">编辑</el-button>
@@ -10,7 +10,7 @@
    </template>
    </el-table-column>
  ```
-scope.$index 获取当前行下标
+* 2 scope.$index 获取当前行下标
 添加进来的操作按钮可以通过scope.$index可以获取当前行对应的下标
 ```
 <el-table-column label="操作" width="160">
@@ -21,7 +21,7 @@ scope.$index 获取当前行下标
 ```
 根据下标可以对指定某一行进行操作
 
-scope.row 获取当前属性值
+* 3 scope.row 获取当前属性值
 通过scope.row.属性名可以获取当前行对应的属性值
 ```
 <el-table-column label="操作" width="160">
