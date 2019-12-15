@@ -3,19 +3,24 @@
 需求：在表格最后一栏添加操作按钮
 
 通过slot-scope="scope"添加操作按钮，这是专门为我们提供的插槽，方便自定义添加不同的内容。
+<pre>
+<code>
    <template slot-scope="scope">
     <el-button size="mini" type="primary">编辑</el-button>
     <el-button size="mini" type="danger">删除</el-button>
    </template>
    </el-table-column>
- 
+   </code>
+ </pre>
 scope.$index 获取当前行下标
 添加进来的操作按钮可以通过scope.$index可以获取当前行对应的下标
+<pre>
 <el-table-column label="操作" width="160">
    <template slot-scope="scope">
     <el-button size="mini" type="primary" plain @click = "showIndex(scope.$index)">点击显示当前行下标</el-button>
    </template>
    </el-table-column>
+   </pre>
 根据下标可以对指定某一行进行操作
 
 scope.row 获取当前属性值
