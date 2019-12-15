@@ -77,8 +77,10 @@ console.log(this.$el.textContent) // => '已更新'
     Vue 实现响应式并不是数据发生变化之后 DOM 立即变化，而是按一定的策略进行 DOM 的更新。
 $nextTick 是在下次 DOM 更新循环结束之后执行延迟回调，在修改数据之后使用 $nextTick，则可以在回调中获取更新后的 DOM
 ## 总结
+***
 整个过程：
 [流程]:https://segmentfault.com/img/remote/1460000020715457
+![流程]
 * 1 在new Vue()后， Vue 会调用_init函数进行初始化，也就是init 过程，在 这个过程Data通过Observer转换成了getter/setter的形式，来对数据追踪变化，当被设置的对象被读取的时候会执行getter函数，而在当被赋值的时候会执行setter函数。
 * 2 当外界通过Watcher读取数据时，会触发getter从而将Watcher添加到依赖中。
 * 3 在修改对象的值的时候，会触发对应的setter，setter通知之前依赖收集得到的 Dep 中的每一个 Watcher，告诉它们自己的值改变了，需要重新渲染视图。这时候这些 Watcher就会开始调用update来更新视图。
