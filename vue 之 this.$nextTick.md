@@ -1,4 +1,4 @@
-# Vue实现响应式后DOM的变化
+# Vue实现改变data后DOM的变化
 ## data对象中数据改变是如何追踪的?
 vue将遍历data对象中所有的属性，并通过 Object.defineProperty 把这些属性全部转为 getter/setter；但是我们是没有办法看到 getter/setter的，但是在内部它们让 Vue 能够追踪依赖，在属性被访问和修改时通知变更。
 
